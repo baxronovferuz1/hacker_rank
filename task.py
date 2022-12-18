@@ -1,4 +1,4 @@
-#Find the Runner-Up Score! 
+""" """ #Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -98,7 +98,7 @@ print(a**b+c**d)
 
 #Capitalize
 
-
+import os
 
 def solve(s):
     for i in s.split():
@@ -114,4 +114,12 @@ if __name__ == '__main__':
 
     fptr.write(result + '\n')
 
-    fptr.close()
+    fptr.close() 
+
+#Zipped!
+
+
+N=map(int,input("SON").split())
+X=map((float,input("BALL").split()) for i in range(N[1]))
+for i in zip(*X):
+    print(sum(i)/N[1]) 
