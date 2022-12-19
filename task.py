@@ -1,4 +1,4 @@
-""" """ #Find the Runner-Up Score! 
+""" """ """ """ #Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -123,3 +123,40 @@ N=map(int,input("SON").split())
 X=map((float,input("BALL").split()) for i in range(N[1]))
 for i in zip(*X):
     print(sum(i)/N[1]) 
+
+
+
+
+
+ #Any or All
+
+N=int(input('nechta>'))
+
+box=[]
+
+for i in range(N):
+    box.append(input('qiymat bering>'))
+    if bool(box)==True:
+        print('True')
+    else:
+        print('False') 
+
+#2xil usl
+
+n = int(input())
+numbers = list(map(int,input().split()))
+count = 0
+count_palindrome = 0
+for element in numbers:
+    if element > 0:
+        count += 1
+for i in range(len(numbers)):
+    string = str(numbers[i])
+    counts = 0
+    for j in range(len(string)//2):
+        if string[j] == string[-1-j]:
+            counts += 1
+    if counts == len(string)//2:
+        count_palindrome += 1
+if count_palindrome > 0 and count ==len(numbers):
+    print(True)
