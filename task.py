@@ -132,11 +132,11 @@ for i in zip(*X):
 
 N=int(input('nechta>'))
 
-box=[]
+boxs=[]
 
 for i in range(N):
-    box.append(input('qiymat bering>'))
-    if bool(box)==True:
+    boxs.append(input('qiymat bering>'))
+    if bool(boxs)==True:
         print('True')
     else:
         print('False') 
