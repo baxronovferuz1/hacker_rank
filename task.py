@@ -1,4 +1,4 @@
-""" """ """ """ #Find the Runner-Up Score! 
+""" """ """ """ """ """ """ """ #Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -159,4 +159,45 @@ for i in range(len(numbers)):
     if counts == len(string)//2:
         count_palindrome += 1
 if count_palindrome > 0 and count ==len(numbers):
-    print(True)
+    print(True) 
+
+
+
+#DefaultDict Tutorial
+
+
+
+from collections import defaultdict
+
+n, m = map(int,input('').split())
+
+a = defaultdict(list)
+for i in range(1, n + 1):
+    a[input('')].append(i)
+
+for i in range(1, m + 1):
+    key = input('')
+    if len(a[key]) > 0:
+        print(" ".join(str(c) for c in a[key]))
+    else:
+        print(-1) 
+
+#Power - Mod Power
+
+a=int(input('enter a>'))
+b=int(input('enter b>'))
+m=int(input('enter m>'))
+print(pow(a,b))
+print((a**b)%m)
+
+
+#Set .union() Operation
+
+
+n=input()
+n1=set(map(int,input().split()))
+b=input()
+b1=set(map(int,input().split()))
+
+x=n1.union(b1)
+print(len(x)) 
