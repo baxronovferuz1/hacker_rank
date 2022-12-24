@@ -1,4 +1,4 @@
-""" """ """ """ """ """ """ """ #Find the Runner-Up Score! 
+""" """ """ """ """ """ """ """ """ #Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -201,3 +201,27 @@ b1=set(map(int,input().split()))
 
 x=n1.union(b1)
 print(len(x)) 
+
+
+
+#Check Subset
+
+T = int(input())
+
+for _ in range(T):
+    a = input()
+    A = set(input().split())
+    b = int(input())
+    B = set(input().split())
+    print(A.issubset(B))
+
+"""
+
+#Polar Coordinates
+
+
+from cmath import sqrt,phase
+c = complex(input())
+
+print(sqrt(pow(c.real,2)+pow(c.imag,2)).real)
+print(phase(complex(c.real,c.imag))) 
