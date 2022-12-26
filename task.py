@@ -225,3 +225,44 @@ c = complex(input())
 
 print(sqrt(pow(c.real,2)+pow(c.imag,2)).real)
 print(phase(complex(c.real,c.imag))) 
+
+
+
+
+
+#Array
+
+
+import numpy
+
+def arrays(arr):
+    
+    # complete this function
+    # use numpy.array
+    return numpy.array(arr[:: -1],float)
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
+
+
+
+#Set .intersection() Operation
+
+first_num = int(input())
+first_set = set(map(int, input().split()))
+second_num = int(input())
+second_set = set(map(int, input().split()))
+print (len(first_set.intersection(second_set)))
+
+
+
+
+#Set .difference() Operation
+
+
+first_name=int(input())
+first_set=set(map(int,input().split()))
+second_name=int(input())
+second_set=set(map(int,input().split()))
+print(len(first_set.difference(second_set)))
