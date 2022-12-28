@@ -266,3 +266,15 @@ first_set=set(map(int,input().split()))
 second_name=int(input())
 second_set=set(map(int,input().split()))
 print(len(first_set.difference(second_set)))
+
+
+
+
+#Set .symmetric_difference() Operation
+
+first_num = int(input())
+first_set = set(map(int, input().split()))
+second_num = int(input())
+second_set = set(map(int, input().split()))
+
+print(len(first_set.symmetric_difference(second_set)))
