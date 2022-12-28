@@ -1,4 +1,4 @@
-""" """ """ """ """ """ """ """ """ #Find the Runner-Up Score! 
+""" """ """ """ """ """ """ """ """ """ #Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -215,7 +215,7 @@ for _ in range(T):
     B = set(input().split())
     print(A.issubset(B))
 
-"""
+
 
 #Polar Coordinates
 
@@ -224,6 +224,7 @@ from cmath import sqrt,phase
 c = complex(input())
 
 print(sqrt(pow(c.real,2)+pow(c.imag,2)).real)
+
 print(phase(complex(c.real,c.imag))) 
 
 
@@ -251,8 +252,10 @@ print(result)
 
 first_num = int(input())
 first_set = set(map(int, input().split()))
+
 second_num = int(input())
 second_set = set(map(int, input().split()))
+
 print (len(first_set.intersection(second_set)))
 
 
@@ -263,8 +266,10 @@ print (len(first_set.intersection(second_set)))
 
 first_name=int(input())
 first_set=set(map(int,input().split()))
+
 second_name=int(input())
 second_set=set(map(int,input().split()))
+
 print(len(first_set.difference(second_set)))
 
 
@@ -274,7 +279,43 @@ print(len(first_set.difference(second_set)))
 
 first_num = int(input())
 first_set = set(map(int, input().split()))
+
 second_num = int(input())
 second_set = set(map(int, input().split()))
 
 print(len(first_set.symmetric_difference(second_set)))
+
+
+
+#Mod Divmod
+
+a=int(input())
+b=int(input())
+print(a//b)
+print(a%b)
+print(divmod(a,b))
+
+
+
+#itertools.permutations()
+
+from itertools import permutations
+
+S = input().split()
+
+for i in sorted(permutations(S[0], int(S[1]))):
+    print(''.join(i))
+
+
+
+#Introduction to Sets
+
+def average(array):
+    # your code goes here
+    return sum(set(array)) / len(set(array))
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)
