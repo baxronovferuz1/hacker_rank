@@ -319,3 +319,35 @@ if __name__ == '__main__':
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+
+
+
+#Symmetric Difference
+
+M=int(input())
+Mset=set(map(int,input().split()))
+N=int(input())
+Nset=set(map(int,input().split()))
+
+
+Mdiff=Mset.difference(Nset)
+Ndiff=Nset.difference(Mset)
+
+result=Mdiff.union(Ndiff)
+
+for i in sorted(list(result)):
+    print(i)
+
+
+
+#Exceptions
+
+x = int(input())
+for i in range(x):
+    try:
+        a, b = input().split()
+        print(int(a)//int(b))
+    except ZeroDivisionError as e:
+        print("Error Code:",e)
+    except ValueError as v:
+        print("Error Code:",v)
