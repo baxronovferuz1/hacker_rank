@@ -351,3 +351,37 @@ for i in range(x):
         print("Error Code:",e)
     except ValueError as v:
         print("Error Code:",v)
+
+
+
+
+#Set .discard(), .remove() & .pop()
+
+n = input()
+s = set(map(int, input().split())) 
+a = int(input())
+
+for i in range(a):
+    k = []
+    k = input().split()
+    if k[0] == 'pop':
+        s.pop()
+    elif k[0] == 'remove':
+        s.remove(int(k[1]))
+    elif k[0] == 'discard':
+        s.discard(int(k[1]))
+    else:
+        print('not a command')
+print(sum(s))
+
+
+#Check Strict Superset
+
+A = set(map(int, input().split()))
+for i in range(int(input())):
+    X = set(map(int, input().split()))
+    if A.issuperset(X) != True or len(A) == len(X): 
+        print(False)
+        break 
+else: print(True)
+        
