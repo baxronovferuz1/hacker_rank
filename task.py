@@ -385,3 +385,34 @@ for i in range(int(input())):
         break 
 else: print(True)
         
+
+
+#Collections.deque()
+
+
+from collections import deque
+d = deque()
+for i in range(int(input())):
+    k =input().split()
+    if k[0] == 'append':
+        d.append(int(k[1]))
+    elif k[0] == 'pop':
+        d.pop()
+    elif k[0] == 'popleft':
+        d.popleft()
+    elif k[0] == 'appendleft':
+        d.appendleft(int(k[1]))
+print(' '.join(map(str,d)))
+
+
+
+#Concatenate
+
+import numpy
+P, N, M = map(int,input().split())
+A = numpy.array([input().split() for _ in range(P)],int)
+B = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.concatenate((A, B), axis = 0))
+
+
+
