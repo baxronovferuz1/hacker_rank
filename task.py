@@ -416,3 +416,31 @@ print(numpy.concatenate((A, B), axis = 0))
 
 
 
+
+#itertools.combinations()
+
+from itertools import combinations
+
+s, k = input().split()
+k = int(k)
+s = sorted(s)
+for i in range(1, k+1):
+    for c in list(combinations(s, i)):
+        print(''.join(c))
+
+
+#Min and Max
+
+import numpy
+
+
+
+
+
+n,m=map(int,input().split())
+
+lista=[list(map(int,input().split())) for i in range(n)]
+
+ar=numpy.array(lista)
+
+print(max(numpy.min(ar,axis=1)))
