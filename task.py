@@ -1,4 +1,4 @@
-""" """ """ """ """ """ """ """ """ """ #Find the Runner-Up Score! 
+#Find the Runner-Up Score! 
 
 if __name__=='__main__':
     n=int(input("son>"))
@@ -443,4 +443,32 @@ lista=[list(map(int,input().split())) for i in range(n)]
 
 ar=numpy.array(lista)
 
-print(max(numpy.min(ar,axis=1)))
+print(max(numpy.min(ar,axis=1))) 
+
+
+
+#Floor, Ceil and Rint
+
+import numpy as np
+
+
+np.set_printoptions(legacy='1.13')
+
+A = np.array(list(map(float,input().split())))
+
+print(np.floor(A))
+
+print(np.ceil(A))
+
+print(np.rint(A))
+
+
+
+#Dot and Cross
+
+import numpy
+
+N = int(input())
+A = numpy.array([input().split() for i in range(N)], int)
+B = numpy.array([input().split() for i in range(N)], int)
+print(numpy.dot(A, B))
