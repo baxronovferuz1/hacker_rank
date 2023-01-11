@@ -472,3 +472,42 @@ N = int(input())
 A = numpy.array([input().split() for i in range(N)], int)
 B = numpy.array([input().split() for i in range(N)], int)
 print(numpy.dot(A, B))
+
+
+
+
+#Concatenate
+
+
+import numpy
+
+P, N, M = map(int,input().split())
+
+A = numpy.array([input().split() for i in range(P)],int)
+B = numpy.array([input().split() for i in range(N)],int)
+
+print(numpy.concatenate((A, B), axis = 0))
+
+
+
+
+#Python Evaluation
+
+#from __future__ import print_function
+eval(input())
+
+#Map and Lambda Function
+
+cube = lambda x:x**3
+ # complete the lambda function 
+
+def fibonacci(n):
+    ls = [0, 1]
+    for i in range(2,n):
+        ls.append(ls[i-1] + ls[i-2])
+    return ls[:n]
+    # return a list of fibonacci numbers
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
