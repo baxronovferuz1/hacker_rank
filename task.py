@@ -510,4 +510,50 @@ def fibonacci(n):
 
 if __name__ == '__main__':
     n = int(input())
+
     print(list(map(cube, fibonacci(n))))
+
+
+
+
+#Re.split()
+
+regex_pattern = r"[,.]"	# Do not delete 'r'.
+
+import re
+
+print("\n".join(re.split(regex_pattern, input())))
+
+
+#itertools.product()
+
+
+from itertools import product
+
+A = input().split()
+A = list(map(int,A))
+B = input().split()
+B = list(map(int, B))
+
+output = list(product(A,B))
+
+for i in output:
+    print(i, end = " ");
+
+
+#collections.Counter()
+
+from collections import Counter
+
+x = int(input())
+sizes = list(map(int,input().split()))
+
+n = int(input())
+sizes = Counter(sizes)
+pr = 0
+for i in range(n):
+    sz,pz = map(int,input().split())
+    if(sizes[sz]):
+        sizes[sz] -= 1
+        pr += pz
+print(pr)
