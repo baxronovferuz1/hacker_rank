@@ -541,7 +541,7 @@ for i in output:
     print(i, end = " ");
 
 
-#collections.Counter()
+# collections.Counter()
 
 from collections import Counter
 
@@ -557,3 +557,44 @@ for i in range(n):
         sizes[sz] -= 1
         pr += pz
 print(pr)
+
+
+
+#Introduction to Sets
+
+def average(array):
+    return sum(set(arr))/len(set(arr))
+    # your code goes here
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)
+
+
+
+
+#Collections.namedtuple()
+
+N, headers, total = int(input()), list(input().split()), 0
+for _ in range(N):
+    total += int(list(input().split())[headers.index('MARKS')])
+print(total/N)
+
+
+
+#Detect Floating Point Number
+
+
+for i in range(int(input())):
+    n=input()
+    try:
+        if n.isdigit():
+            print("False")
+        else:
+            float(n)
+            print("True")
+    except:
+        print("False")
+    
