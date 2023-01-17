@@ -162,3 +162,82 @@ for i in range(q):
         print('Cat B')
     else:
         print('Mouse C')
+
+
+#Compare the Triplets
+
+
+
+    
+import math
+import os
+import random
+import re
+import sys
+
+
+def compareTriplets(a, b):
+    pointa=0
+    pointb=0
+    ar = []
+    for i in range(3):
+        if a[i]>b[i]:
+            pointa+=1
+            
+        if a[i]<b[i]:
+            pointb+=1
+    ar.insert(0,pointa)
+    ar.insert(1,pointb)        
+    return(ar)
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    a = list(map(int, input().rstrip().split()))
+
+    b = list(map(int, input().rstrip().split()))
+
+    result = compareTriplets(a, b)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
+
+
+#Find Digits
+
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+def findDigits(n):
+    num_divisor = 0
+    num_digit = math.floor(math.log10(n))+1
+    for i in range(num_digit):
+      d = (n//10**i) % 10
+      if ((d != 0) and (n % d == 0)):
+         num_divisor = num_divisor + 1
+    return num_divisor
+   
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        result = findDigits(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+ 
